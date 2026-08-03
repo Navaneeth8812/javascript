@@ -1,5 +1,5 @@
 let company = {
-    car:'tesla',
+    car:'tesla', //a dictionary is also called an object
     rocket:'spacex',
     internet:'starlink',
     brainComputer:'Neuralink',
