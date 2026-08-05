@@ -1,4 +1,3 @@
-
 function printNum1(){
     document.getElementById('out').innerHTML=1;
     return 1;
@@ -11,8 +10,10 @@ function printNum2(){
 let value2 =printNum2();
 
 function addNum(){
-    return value1+value1;
+    return printNum1()+printNum2();
 }
 function subNum(){
-    return value1-value2;
+    return printNum1()-printNum2();
 }
+
+
