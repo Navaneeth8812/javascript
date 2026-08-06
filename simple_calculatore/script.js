@@ -10,7 +10,7 @@ function printNum2(){
 let value2 =printNum2();
 
 function addNum(){
-    return printNum1()+printNum2();
+    return value1+value2;
 }
 function subNum(){
     return printNum1()-printNum2();
