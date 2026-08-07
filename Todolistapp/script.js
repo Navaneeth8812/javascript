@@ -14,18 +14,37 @@ function addTodo(){
     textarea.value=''
     updateUI()
 }
+function editTodo(index){
+    textarea.value=todoList[index]
+    todoList = todoList.filter((element, elementIndex)=>{
+        if(index===elementIndex){
+            return false
+        }
+        return true
+    })
+    updateUI()
+}
+function deleteTodo(index){
+    todoList = todoList.filter((element, elementIndex)=>{
+        if(index === elementIndex){
+            return false
+        }
+        return true
+    })
+    updateUI()
+}
 
 function updateUI(){
     let newInnerHTML =''
-    todoList.forEach((todoElement)=>{
+    todoList.forEach((todoElement, todoIndex)=>{
         newInnerHTML+=`
             <div class="todo">
                 <p>${todoElement}</p>
                 <div class="button-container">
-                <button class="icon-btn edit">
+                <button class="icon-btn edit" onclick="editTodo(${todoIndex})">
                     <i class="fa-solid fa-pen-to-square"></i>
                 </button>
-                <button class="icon-btn">
+                <button class="icon-btn" onclick="deleteTodo(${todoIndex})">
                     <i class="fa-solid fa-xmark"></i>
                 </button>
            </div> 
