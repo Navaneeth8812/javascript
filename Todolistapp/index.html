@@ -3,13 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Todolistapp</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css" integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <h1>Todolist app</h1>
-    <input id="box" type="text" placeholder="enter any item">
-    <button id="">add item</button>
-    <p id="div"></p>
+    <h1>Todo list app</h1>
+    <form onsubmit="return false">
+        <textarea name="" id="" placeholder="enter the todo's"></textarea>
+        <button class="add-btn" id="addBtn">add</button>
+    </form>
+    <section>
+        <h4>Current todos..</h4>
+        <div class="todo-container">
+            <div class="todo">
+                 <p></p>
+                <div class="button-container">
+                <button class="icon-btn edit">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                </button>
+                <button class="icon-btn">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div> 
+            </div>
+        </div>
+    </section>
     <script src="script.js"></script>
 </body>
 </html>
