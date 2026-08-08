@@ -2,6 +2,15 @@ const textarea = document.querySelector('textarea')
 const addBtn = document.getElementById('addBtn')
 const bookContainer = document.querySelector('.book-container')
 let bookList = []
+
+function initialLoad(){
+    if(!localStorage.getItem('todos')){
+        return
+    }
+    bookList = JSON.parse(localStorage.getItem('todos')).bookList
+}
+initialLoad()
+
 function addBook(){
     const book = textarea.value
     console.log('add todo:', book)
@@ -48,5 +57,6 @@ function updateUI(){
     `
 })
 bookContainer.innerHTML = newInnerHTML
+localStorage.setItem('todos',JSON.stringify({bookList}))
 }
 addBtn.addEventListener('click', addBook)

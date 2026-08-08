@@ -6,7 +6,7 @@ let todoList = []
 
 function initialLoad(){
     if(!localStorage.getItem){return}
-    JSON.parse(localStorage.getItem('todos')).todoList
+    todoList=JSON.parse(localStorage.getItem('todos')).todoList
     updateUI()
 }
 initialLoad()

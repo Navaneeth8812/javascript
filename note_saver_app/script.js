@@ -53,3 +53,4 @@ function updateUI(){
     bookContainer.innerHTML = newInnerHTML
 }
 addBtn.addEventListener('click', addNote)
+
