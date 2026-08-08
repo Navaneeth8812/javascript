@@ -4,6 +4,13 @@ const todoContainer = document.querySelector('.todo-container')
 
 let todoList = []
 
+function initialLoad(){
+    if(!localStorage.getItem){return}
+    JSON.parse(localStorage.getItem('todos')).todoList
+    updateUI()
+}
+initialLoad()
+
 function addTodo(){
     const todo = textarea.value
     console.log('add todo:', todo)
@@ -52,6 +59,8 @@ function updateUI(){
     `
     })
     todoContainer.innerHTML = newInnerHTML
+    localStorage.setItem('todos', JSON.stringify({todoList}))
 }
+
 addBtn.addEventListener('click', addTodo)
 
