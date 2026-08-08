@@ -3,6 +3,16 @@ const addBtn = document.getElementById('addBtn')
 const bookContainer = document.querySelector('.notes-container')
 
 let notesList = []
+
+function initialLoad(){
+    if(!localStorage.getItem('notes')){
+        return
+    }
+    notesList = JSON.parse(localStorage.getItem('notes')).notesList
+    updateUI()
+}
+initialLoad()
+
 function editNote(index){
     textarea.value = notesList[index]
     notesList = notesList.filter((noteselement, notesIndex)=>{
@@ -38,7 +48,7 @@ function updateUI(){
     notesList.forEach((noteselement, notesIndex)=>{
         newInnerHTML +=`
           <div class="books">
-                <p>${noteselement}<p>
+                <p>${noteselement}</p>
                 <div class="btn-container">
                 <button class="btn" onclick="editNote(${notesIndex})">
                      <i class="fa-solid fa-pen-to-square"></i>
@@ -49,8 +59,9 @@ function updateUI(){
                 </div> 
             </div>  
         `    
-    })
-    bookContainer.innerHTML = newInnerHTML
+})
+bookContainer.innerHTML = newInnerHTML
+localStorage.setItem('notes', JSON.stringify({notesList}))
 }
 addBtn.addEventListener('click', addNote)
 
