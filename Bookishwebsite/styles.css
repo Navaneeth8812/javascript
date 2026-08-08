@@ -14,10 +14,17 @@ textarea{
     width: 100%;
     margin: 1rem;
 }
+#addBtn{
+    padding: 0.2rem;
+    margin: 1rem;
+}
 .book-container{
     display: grid;
     width: 100%;
     align-items: center;
+    border: 1px solid lightgrey;
+    padding: 1rem;
+    gap: 1rem;
 }
 .btn-container{
     display: flex;
