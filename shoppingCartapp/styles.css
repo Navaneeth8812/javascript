@@ -39,10 +39,38 @@ section{
 .items{
     display: flex;
     gap: 4rem;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    border: 1px solid lightgray;
+    padding: 3rem;
+    border-radius: 1rem;
+    width: 20rem;
 }
 .btn-sec{
     display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
     align-items: flex-end;
 }
+.grocery{
+    display: flex;
+    gap: 1rem;
+    align-items: start;
+}
+.grocery button{
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+}
+.item-sec{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    min-width: 5rem;
+}
+/* .dropdown-content{
+    display: none;
+}
+.dropdown-content:hover{
+    display: block;
+    position: relative;
+} */
