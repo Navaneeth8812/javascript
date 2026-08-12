@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shopping-cart-app</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css" integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <form onsubmit="return false">
+        <textarea name="" id="" placeholder="enter the items">
+        </textarea>
+        <button>category</button>
+         <!-- here im planning to add a dropdown box in which the user can select the item type like grocery, electronics etc -->
+        <button class="addBtn" type="submit" id="addBtn" onclick="addItem()">add to kart</button>
+    </form>
+    <section>
+        <div class="items">
+            <p>your items will appear here..</p>
+            <div class="grocery">
+                <h3>Items</h3>
+                <p></p>
+                 <div class="btn-sec">
+                <button onclick=deleteItem()>
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <!-- <div class="grocery">
+                <h3>Grocery</h3>
+                <p></p>
+            </div>
+            <div class="electronics">
+                <h3>Electronics</h3>
+                <p></p>
+            </div>
+            <div class="games">
+                <h3>Games</h3>
+                <p></p>
+            </div>  -->
+            <!-- <div class="btn-sec">
+                <button>
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div> -->
+
+        </div>
+    </section>
+    <script src="index.js"></script>
+</body>
+</html>

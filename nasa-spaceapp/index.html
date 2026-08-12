@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA-space-explorer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- <div class="img-cont">
+         <img src="/nasa-spaceapp/public/nasaback.jpeg" alt="">
+    </div>
+    -->
+    <h1>SPACE EXPLORER</h1>
+    <small>explore the universe</small>
+    <div class="container">
+        <section class="content">
+            <div class="btn-con">
+                <button class="con-btn" id="mission">Missions</button>
+                <button class="con-btn" id="earth">Earth</button>
+                <button class="con-btn" id="asteroid">Asteroids</button>
+                <button class="con-btn" id="planet" onclick="displayPlanet()">Planets</button>
+                <button class="con-btn" id="satellite">Satellites</button>
+            </div>
+            <div class="con-area" id="here">
+            
+                
+
+        </section>
+    </div>
+    <script>
+        let planetList = ["EARTH", "MARS","SATURN"];
+        let newInnerHTML = ''
+        function displayPlanet(){
+            planetList.forEach((planetelement, planetname)=>{
+                planetname = JSON.parse(planetList)
+                newInnerHTML +=`
+                    <div class="planet-area">
+                        <p>${planetelement}</p>
+                        <p>${planetname}</p>
+                    </div> 
+                `
+            })
+        }
+    </script> 
+</body>
+</html>

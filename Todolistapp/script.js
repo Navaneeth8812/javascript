@@ -4,12 +4,12 @@ const todoContainer = document.querySelector('.todo-container')
 
 let todoList = []
 
-function initialLoad(){
-    if(!localStorage.getItem('todos')){return}
-    todoList=JSON.parse(localStorage.getItem('todos')).todoList
-    updateUI()
-}
-initialLoad()
+// function initialLoad(){
+//     if(!localStorage.getItem('todos')){return}
+//     todoList=JSON.parse(localStorage.getItem('todos')).todoList
+//     updateUI()
+// }
+// initialLoad()
 
 function addTodo(){
     const todo = textarea.value
@@ -23,8 +23,8 @@ function addTodo(){
 }
 function editTodo(index){
     textarea.value=todoList[index]
-    todoList = todoList.filter((element, elementIndex)=>{
-        if(index===elementIndex){
+    todoList = todoList.filter((x, y)=>{
+        if(index===x){
             return false
         }
         return true
@@ -32,8 +32,8 @@ function editTodo(index){
     updateUI()
 }
 function deleteTodo(index){
-    todoList = todoList.filter((element, elementIndex)=>{
-        if(index === elementIndex){
+    todoList = todoList.filter((x, y)=>{
+        if(index === y){
             return false
         }
         return true
