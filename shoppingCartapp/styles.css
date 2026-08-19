@@ -10,7 +10,7 @@ body{
     margin-top: 3rem;
     flex-direction: column;
 }
-form{
+form{ 
     display: flex;
     flex-direction: column;
     padding: 1rem;

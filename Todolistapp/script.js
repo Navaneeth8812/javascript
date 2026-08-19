@@ -24,7 +24,7 @@ function addTodo(){
 function editTodo(index){
     textarea.value=todoList[index]
     todoList = todoList.filter((x, y)=>{
-        if(index===x){
+        if(index===y){
             return false
         }
         return true

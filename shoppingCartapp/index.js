@@ -7,11 +7,21 @@ let itemList = []
 function deleteItem(index){
     itemList = itemList.filter((x,y)=>{
         if(index === y){
+            return false 
+        }
+        return true
+    })
+    updateUI()
+}
+function editItem(index){
+    textarea.value = itemList[index]
+    itemList = itemList.filter((elementIndex, elementItem)=>{
+        if(index ===elementItem){
             return false
         }
         return true
     })
-    updateUI();
+    updateUI()
 }
 function addItem(){
     let item = textarea.value
@@ -33,6 +43,9 @@ function updateUI(){
                  <div class="btn-sec">
                 <button onclick=deleteItem(${elementIndex})>
                     <i class="fa-solid fa-xmark"></i>
+                </button>
+                <button class="btn" onclick="editItem(${elementIndex})">
+                     <i class="fa-solid fa-pen-to-square"></i>
                 </button>
             </div>
             </div>
