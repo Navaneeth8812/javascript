@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>expenses tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css" integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <h1>Starbreak expenses tracker</h1>
+    <div class="main-container">
+        <h2>your expenses</h2>
+        <div class="stats">
+            <div class="total">
+                 <h4>total</h4>
+                 <p id="total">0.00$</p>
+            </div>
+    
+            <div class="balance">
+                <h4>balance</h4>
+                <p id="balance">0.00$</p>
+            </div>
+        </div>
+    </div>
+    <div class="transaction-container">
+         <h3>Transactions</h3> 
+    <div class="added-items">
+       <!-- <div class="btn-container">
+        <button class="btn">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+       </div> -->
+    </div>
+    <div class="secondary">
+        <div class="item">
+            <label for="">description</label>
+            <textarea placeholder="orders" name="" id=""></textarea>
+        </div>
+        <div class="price">
+            <label for="">amount</label>
+            <input type="text" id="amt" placeholder="in $"> 
+        </div>
+        <button id="addBtn">add transaction</button>
+    </div>
+    </div>
+   
+    <script src="script.js"></script>
+</body>
+</html>
